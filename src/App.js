@@ -63,7 +63,6 @@ function App() {
           console.error("Error:", error);
         }
       }
-      console.log(loggedIn);
     };
     
     const fetchData = async () => {

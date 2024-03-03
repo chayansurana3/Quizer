@@ -20,7 +20,6 @@ export default function Profile(props) {
                 if (response.status === 200) {
                     const data = await response.json();
                     setUserData(data.user);
-                    console.log(userData);
                 } else {
                     console.log("Error while fetching data");
                 }

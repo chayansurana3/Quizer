@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useHistory } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Question from "./Question";
 import Swal from "sweetalert2";
 

@@ -9,7 +9,7 @@ export default function Create(props) {
 
     useEffect(() =>{
         if (!props.loggedIn) navigate("/login");
-    }, [props.loggedIn])
+    }, [props.loggedIn, navigate])
 
     const handleAddQuestion = () => {
         setQuestions([...questions, { question: "", options: ["", "", "", ""], correctOption: "" }]);

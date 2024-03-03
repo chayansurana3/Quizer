@@ -28,7 +28,7 @@ export default function Explore(props) {
     }
     setQuizzes(props.quizzes);
     console.log("Started");
-  }, [props.quizzes, setQuizzes]);
+  }, [props.quizzes, navigate, props.loggedIn, setQuizzes]);
 
   const getImageByQuizId = (id) => {
     switch (id) {

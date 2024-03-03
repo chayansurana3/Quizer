@@ -27,13 +27,9 @@ Quizer is an interactive quiz platform designed to test users' knowledge across 
 
 3. **Personalized Profiles:** Users can create personalized profiles upon registration, enabling them to track their quiz history, view past scores, and monitor their performance across different subjects.
 
-4. **Dynamic Question Generation:** Quizer dynamically generates questions from a curated database, ensuring that users encounter fresh and challenging content with each quiz attempt.
+4. **Real-Time Score Updates:** As users progress through quizzes, Quizer provides real-time score updates, enabling them to gauge their performance and identify areas for improvement instantly.
 
-5. **Real-Time Score Updates:** As users progress through quizzes, Quizer provides real-time score updates, enabling them to gauge their performance and identify areas for improvement instantly.
-
-6. **Social Sharing:** Users can share their quiz results and achievements with friends and peers via social media platforms, fostering a sense of community and healthy competition.
-
-7. **Responsive Design:** Quizer features a responsive design that adapts seamlessly to various devices and screen sizes, allowing users to enjoy the quiz experience on desktops, tablets, and smartphones alike.
+5. **Responsive Design:** Quizer features a responsive design that adapts seamlessly to various devices and screen sizes, allowing users to enjoy the quiz experience on desktops, tablets, and smartphones alike.
 
 ## Links
 
@@ -65,9 +61,11 @@ To run Quizer locally, follow these steps:
    cd Quizer
 
 3. **Install dependencies:**
+    ```bash
    npm install
 
-4. **Start the development server:**
+5. **Start the development server:**
+    ```bash
    npm start
 
 ## Usage

@@ -1,0 +1,32 @@
+const mongoose = require("mongoose");
+const Quiz = require("./models/quizSchema");
+
+exports.handler = async (event, context) => {
+  try {
+    mongoose.connect(`mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@cluster0.y0mzlcb.mongodb.net/${process.env.QUIZ_DB}?retryWrites=true&w=majority`)
+    .then(() => console.log("Connected to MongoDB"))
+    .catch((error) => console.error("Error connecting to MongoDB:", error));
+    
+    const { id, title, questions, userName, totalTimeInSeconds } = JSON.parse(event.body);
+
+    const newQuiz = new Quiz({
+      id: id,
+      title: title,
+      questions: questions,
+      author: userName,
+      time: totalTimeInSeconds,
+    });
+    await newQuiz.save();
+
+    return {
+      statusCode: 201,
+      body: JSON.stringify({ message: "Quiz created successfully" })
+    };
+  } catch (error) {
+    console.error(error);
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ message: "Internal server error" })
+    };
+  }
+};

@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 Chart.register(ArcElement, Legend, Title, Tooltip);
 
-export default function Score({ quizName, userScore, totalQuestions, totalTimeTaken, totalTime }){
+export default function Score({ quizName, userScore, totalQuestions, totalTimeTaken, totalTime, showSolutions }){
     const navigate = useNavigate();
     const scoreData = {
         labels: ['Correct Answers', 'Incorrect Answers'],
@@ -71,7 +71,7 @@ export default function Score({ quizName, userScore, totalQuestions, totalTimeTa
                 <Doughnut data={timeData} options={options} />
             </div>
             <button className="mt-4 px-6 py-3 bg-blue-500 text-white font-semibold rounded-md shadow-md hover:bg-blue-600 transition-colors duration-300" onClick={goToHome}>Take Me Home</button>
-            <button className="mt-4 px-6 py-3 bg-blue-500 text-white font-semibold rounded-md shadow-md hover:bg-blue-600 transition-colors duration-300" onClick={goToHome}>Check Solution</button>
+            <button className="mt-4 px-6 py-3 bg-blue-500 text-white font-semibold rounded-md shadow-md hover:bg-blue-600 transition-colors duration-300" onClick={showSolutions}>Check Solution</button>
 
         </div>
     );

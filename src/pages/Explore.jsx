@@ -118,7 +118,10 @@ export default function Explore(props) {
     return score;
   }
 
-  const showSolutions = () => setShowAnswers(true);
+  const showSolutions = () => {
+    setQuizCompleted(false);
+    setShowAnswers(true);
+  }
 
   return (
     <div>
@@ -129,6 +132,7 @@ export default function Explore(props) {
           totalQuestions={selectedQuiz.questions.length}
           totalTimeTaken={totalTimeTaken}
           totalTime={selectedQuiz.time}
+          showSolutions={showSolutions}
         />
       ) : (
         <div>

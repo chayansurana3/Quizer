@@ -15,9 +15,12 @@ Quizer is an interactive quiz platform designed to test users' knowledge across 
 
 ## Demo
 
-[Link to Live Demo](#) *(Add link to live demo if available)*
-
-![Quizer Demo](demo.gif) *(Add a demo GIF or screenshot if available)*
+![ScreenShot1](./screenshots/Screenshot1.png) 
+![ScreenShot1](./screenshots/Screenshot2.png) 
+![ScreenShot1](./screenshots/Screenshot3.png) 
+![ScreenShot1](./screenshots/Screenshot4.png) 
+![ScreenShot1](./screenshots/Screenshot5.png) 
+![ScreenShot1](./screenshots/Screenshot6.png) 
 
 ## Features
 

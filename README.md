@@ -34,7 +34,7 @@ Quizer is an interactive quiz platform designed to test users' knowledge across 
 ## Links
 
 - Solution URL: [GitHub Repository](https://github.com/chayansurana3/Quizer.git)
-- Live Site URL: [Quizer - Live Site](https://org-analytics.netlify.app)
+- Live Site URL: [Quizer - Live Site](https://quizer2024.netlify.app/)
 
 ## Built With
 

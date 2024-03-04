@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Card from "../components/Card";
 import Quiz from "../components/Quiz";
 import Score from "../components/Score";
+import Solution from "../components/Solution";
 import Quiz1 from "../images/quiz1.jpg";
 import Quiz2 from "../images/quiz2.avif";
 import Quiz3 from "../images/quiz3.jpg";
@@ -15,8 +16,10 @@ import Swal from "sweetalert2";
 
 export default function Explore(props) {
   const [quizzes, setQuizzes] = useState([]);
+  const [answers, setAnswers] = useState([]);
   const [selectedQuiz, setSelectedQuiz] = useState(null);
   const [quizCompleted, setQuizCompleted] = useState(false);
+  const [showAnswers, setShowAnswers] = useState(false);
   const [userScore, setUserScore] = useState(0);
   const [totalTimeTaken, setTotalTimeTaken] = useState(0);
   const navigate = useNavigate();
@@ -64,6 +67,7 @@ export default function Explore(props) {
   const closeQuiz = async ({ answers, timeLeft }) => {
     props.attempting();
     setTotalTimeTaken(selectedQuiz.time - timeLeft);
+    setAnswers(answers);
     let score = markQuiz(answers);
     setUserScore(score);
 
@@ -114,6 +118,8 @@ export default function Explore(props) {
     return score;
   }
 
+  const showSolutions = () => setShowAnswers(true);
+
   return (
     <div>
       {quizCompleted ? (
@@ -126,11 +132,11 @@ export default function Explore(props) {
         />
       ) : (
         <div>
-          <div className={`flex flex-col lg:flex-row ${selectedQuiz ? 'hidden' : ''}`}>
+          <div className={`mt-16 flex flex-col lg:flex-row ${selectedQuiz ? 'hidden' : ''}`}>
             {!selectedQuiz && (
               <div className="flex lg:flex-wrap">
                 {quizzes.map((quiz) => (
-                  <div key={quiz.id} className="w-1/2 sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 px-2 mb-8">
+                  <div key={quiz.id} className="w-full lg:w-1/2 px-2 mb-8">
                     <Card
                       image={getImageByQuizId(quiz.id)}
                       title={quiz.title}
@@ -152,6 +158,9 @@ export default function Explore(props) {
                 onClose={closeQuiz}
               />
             )}
+          </div>
+          <div>
+              {showAnswers && <Solution questions={selectedQuiz} userAnswers={answers} />}
           </div>
         </div>
       )}

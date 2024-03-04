@@ -58,7 +58,7 @@ export default function Score({ quizName, userScore, totalQuestions, totalTimeTa
     const goToHome = () => navigate("/");
 
     return (
-        <div className="text-center score-container border border-gray-300 p-4 rounded-lg shadow-md mt-24">
+        <div className="text-center score-container border border-gray-300 p-4 rounded-lg shadow-md">
             <h1 className="text-5xl font-bold text-transparent bg-gradient-to-r from-red-400 via-green-500 to-blue-500 bg-clip-text animate-pulse mb-2">Congratulations!</h1>
             <h2 className='text-3xl font-bold text-blue-600'>Your Score Card</h2>
             <h3 className="text-2xl font-semibold mb-4 mt-2 text-blue-500">{quizName}</h3>

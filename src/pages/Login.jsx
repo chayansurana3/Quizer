@@ -76,7 +76,7 @@ export default function Login(props) {
     };
 
     return (
-        <div className="mt-32 lg:mt-24 bg-gray-200 flex justify-center items-center h-screen w-screen">
+        <div className="mt-4 bg-gray-200 flex justify-center items-center h-screen w-screen">
             <div className="border-t-8 rounded-sm border-indigo-600 bg-white p-12 shadow-2xl w-96">
                 <h1 className="font-bold text-center block text-2xl">Log In</h1>
                 <form onSubmit={handleSubmit}>

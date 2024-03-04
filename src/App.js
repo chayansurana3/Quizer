@@ -11,8 +11,8 @@ import Profile from './pages/Profile';
 import Swal from 'sweetalert2';
 
 function App() {
-  const [loggedIn, setLoggedIn] = useState(false);
-  const [userName, setUserName] = useState("-");
+  const [loggedIn, setLoggedIn] = useState(true);
+  const [userName, setUserName] = useState("Chayan Surana");
   const [userEmail, setUserEmail] = useState("-");
   const [quizzes, setQuizzes] = useState([]);
   const [id, setId] = useState(0);

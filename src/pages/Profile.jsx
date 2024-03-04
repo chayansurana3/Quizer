@@ -42,7 +42,6 @@ export default function Profile(props) {
     }
 
     const handleChangePassword = async (e) => {
-        // e.preventDefault();
         let newPassword = document.getElementById('newPassword').value;
         let reNewPassword = document.getElementById('reNewPassword').value;
         if (newPassword !== reNewPassword || newPassword === "") {
@@ -107,7 +106,7 @@ export default function Profile(props) {
     }
 
     return (
-        <div className="mt-36 lg:mt-32 max-w-lg mx-auto rounded-lg shadow-lg p-8">
+        <div className="mt-8 max-w-lg mx-auto rounded-lg shadow-lg p-8">
             <div className="flex items-center mb-8">
                 <div>
                     <h1 className="text-2xl font-bold">{props.userName || "-"}</h1>

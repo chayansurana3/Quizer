@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function Home(){
     return (
-        <div className="h-screen mt-16 lg:mt-24 bg-gradient-to-r from-blue-500 to-indigo-700 text-white flex flex-col items-center justify-center">
+        <div className="h-screen bg-gradient-to-r from-blue-500 to-indigo-700 text-white flex flex-col items-center justify-center">
             <div className="text-center">
                 <h1 className="text-5xl font-bold mb-12">Welcome to Quizer</h1>
                 <p className="text-lg mb-12">The ultimate platform for creating, sharing, and taking a quiz.</p>

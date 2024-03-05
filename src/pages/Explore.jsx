@@ -165,9 +165,7 @@ export default function Explore(props) {
               />
             )}
           </div>
-          <div>
-              {showAnswers && <Solution questions={selectedQuiz} userAnswers={answers} />}
-          </div>
+          <div>{showAnswers && <Solution quiz={selectedQuiz} userAnswers={answers} />}</div>
         </div>
       )}
     </div>

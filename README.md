@@ -12,6 +12,7 @@ Quizer is an interactive quiz platform designed to test users' knowledge across 
   - [Built With](#built-with)
   - [Installation](#installation)
   - [Usage](#usage)
+  - [Note](#note)
 
 ## Demo
 
@@ -76,3 +77,7 @@ To run Quizer locally, follow these steps:
 Upon accessing Quizer, users can sign up for an account or log in if they already have one.
 After logging in, users can select quiz categories, attempt quizzes, and view their scores.
 Users can also access their personalized profiles to track their quiz history and manage account settings.
+
+## Note
+
+This project was part of a task assigned by my mentors during my internship at Neuro Nexus Innovation. 

@@ -17,8 +17,8 @@ export default function Solution({ quiz, userAnswers }) {
                         {question.options.map((option, optionIndex) => (
                             <button
                                 key={optionIndex}
-                                className={`block w-full py-2 px-4 rounded ${userAnswers[index] === optionIndex + 1
-                                        ? "bg-red-500 text-white"
+                                className={`block w-full py-2 px-4 rounded ${userAnswers[index] === optionIndex + 1 && quiz.questions[index].correctOption !== optionIndex + 1
+                                        ? "bg-red-500 text-white" 
                                         : quiz.questions[index].correctOption === optionIndex + 1
                                             ? "bg-green-500 text-white"
                                             : "bg-blue-400 text-black"
@@ -28,7 +28,7 @@ export default function Solution({ quiz, userAnswers }) {
                             </button>
                         ))}
                     </div>
-                    <div className="mt-4"><button onClick={goToHome} className="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded shadow">Take me home</button></div>
+                    {index >= quiz.questions.size - 1 && <div className="mt-4"><button onClick={goToHome} className="mx-auto px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded shadow">Take me home</button></div> }
                 </div>
             ))}
         </div>

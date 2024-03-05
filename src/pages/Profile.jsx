@@ -6,6 +6,7 @@ export default function Profile(props) {
     const [match, setMatch] = useState(null);
     const [weakPassword, setWeakPassword] = useState(null);
     const [userData, setUserData] = useState(null);
+    const [resetting, setResetting] = useState(false);
     
     useEffect(() => {
         const fetchUserData = async () => {
@@ -53,6 +54,7 @@ export default function Profile(props) {
             return;
         }
         setMatch(true);
+        setResetting(true);
         try {
             const response = await fetch("/.netlify/functions/password", {
                 method: "POST",
@@ -94,6 +96,7 @@ export default function Profile(props) {
             });
             console.error("Error:", error);
         }
+        setResetting(false);
     };
     
 
@@ -140,7 +143,7 @@ export default function Profile(props) {
                     {match !== null && !match && <p className="text-red-500 text-center m-2">❌Passwords do not match</p>}
                     {weakPassword !== null && weakPassword && (<p className="text-blue-500 text-center m-2">❗Password is weak. It should be at least 8 characters long and contain a combination of letters, numbers, and special characters.</p>)}
                     {match && <p className="text-green-600 text-center m-2">✅Passwords match</p>}
-                    <button onClick={handleChangePassword} className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Reset Password</button>
+                    <button onClick={handleChangePassword} className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline">{resetting ? "Resetting..." : "Reset Password"}</button>
                 </div>
             </div>
         </div>

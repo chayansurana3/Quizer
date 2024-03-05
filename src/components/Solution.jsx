@@ -28,7 +28,7 @@ export default function Solution({ quiz, userAnswers }) {
                             </button>
                         ))}
                     </div>
-                    {index >= quiz.questions.size - 1 && <div className="mt-4"><button onClick={goToHome} className="mx-auto px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded shadow">Take me home</button></div> }
+                    {index >= quiz.questions.length - 1 && <div className="mt-4"><button onClick={goToHome} className="mx-auto px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded shadow">Take me home</button></div> }
                 </div>
             ))}
         </div>

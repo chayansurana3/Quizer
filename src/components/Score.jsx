@@ -71,7 +71,7 @@ export default function Score({ quizName, userScore, totalQuestions, totalTimeTa
                 <Doughnut data={timeData} options={options} />
             </div>
             <button className="block mt-4 mx-auto px-6 py-3 bg-blue-500 text-white font-semibold rounded-md shadow-md hover:bg-blue-600 transition-colors duration-300" onClick={goToHome}>Take Me Home</button><br></br>
-            <button className="mx-auto block mt-4 px-6 py-3 bg-blue-500 text-white font-semibold rounded-md shadow-md hover:bg-blue-600 transition-colors duration-300" onClick={showSolutions}>Check Solution</button>
+            <button className="mx-auto mt-2 block px-6 py-3 bg-blue-500 text-white font-semibold rounded-md shadow-md hover:bg-blue-600 transition-colors duration-300" onClick={showSolutions}>Check Solution</button>
         </div>
     );
 };

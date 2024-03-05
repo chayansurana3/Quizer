@@ -99,7 +99,6 @@ export default function Profile(props) {
         setResetting(false);
     };
     
-
     const showPassword = (id) => {
         const passwordInput = document.getElementById(id);
         const togglePasswordButton = id === "newPassword" ? document.getElementById("togglePassword1") : document.getElementById("togglePassword2");

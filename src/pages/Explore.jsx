@@ -70,12 +70,14 @@ export default function Explore(props) {
     setAnswers(answers);
     let score = markQuiz(answers);
     setUserScore(score);
+    console.log(selectedQuiz);
+    console.log(answers);
 
     const requestBody = {
       id: selectedQuiz.id,
       email: props.userEmail,
       title: selectedQuiz.title,
-      score: score,
+      score: score
     };
 
     console.log(requestBody);

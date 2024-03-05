@@ -26,9 +26,7 @@ export default function Solution({ questions, userAnswers }) {
                             </button>
                         ))}
                     </div>
-                    <div className="mt-4">
-                        <button onClick={goToHome} className="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded shadow">Take me home</button>
-                    </div>
+                    <div className="mt-4"><button onClick={goToHome} className="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded shadow">Take me home</button></div>
                 </div>
             ))}
         </div>

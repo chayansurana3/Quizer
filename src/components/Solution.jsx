@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Solution({ quiz, userAnswers }) {
     const navigate = useNavigate();
     const goToHome = () => navigate("/");
+
+    useEffect(() => console.log("Loaded: ", quiz));
 
     return (
         <div className="max-w-3xl mx-auto">

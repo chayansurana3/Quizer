@@ -156,7 +156,7 @@ export default function Explore(props) {
             )}
           </div>
           <div className="mt-0">
-            {selectedQuiz && (
+            {selectedQuiz && !showAnswers && (
               <Quiz
                 name={selectedQuiz.title}
                 problems={selectedQuiz.questions}

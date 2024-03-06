@@ -65,14 +65,13 @@ export default function Explore(props) {
   }
 
   const closeQuiz = async ({ answers, timeLeft }) => {
-    props.attempting();
     setTotalTimeTaken(selectedQuiz.time - timeLeft);
     setAnswers(answers);
     let score = markQuiz(answers);
     setUserScore(score);
     console.log(selectedQuiz);
     console.log(answers);
-
+    
     const requestBody = {
       id: selectedQuiz.id,
       email: props.userEmail,
@@ -109,6 +108,7 @@ export default function Explore(props) {
       });
     }
     setQuizCompleted(true);
+    props.attempting();
   };
 
   const markQuiz = (answers) => {

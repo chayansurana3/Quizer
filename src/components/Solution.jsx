@@ -19,15 +19,15 @@ export default function Solution({ quiz, score, userAnswers }) {
                                 className={`block w-full py-2 px-4 rounded ${userAnswers[index] === optionIndex + 1 && quiz.questions[index].correctOption !== optionIndex + 1
                                         ? "bg-red-500 text-white" 
                                         : quiz.questions[index].correctOption === optionIndex + 1
-                                            ? "bg-green-500 text-white"
-                                            : "bg-blue-400 text-black"
+                                            ? "bg-green-600 text-white"
+                                            : "bg-blue-600 text-black"
                                     }`}
                             >
                                 {option}
                             </button>
                         ))}
                     </div>
-                    {index >= quiz.questions.length - 1 && <button onClick={goToHome} className="text-center px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded shadow">Take me home</button> }
+                {index >= quiz.questions.length - 1 && <button onClick={goToHome} className="text-center mt-4 mx-auto px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded shadow">Take me home</button> }
                 </div>
             ))}
         </div>

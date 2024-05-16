@@ -138,7 +138,7 @@ export default function Explore(props) {
         />
       ) : (
         <div>
-          <div className={`mt-2 bg-black py-6 flex flex-col lg:flex-row ${selectedQuiz ? 'hidden' : ''}`} >
+          <div className={`bg-black py-10 flex flex-col lg:flex-row ${selectedQuiz ? 'hidden' : ''}`} >
             {!selectedQuiz && (
               <div className="flex flex-wrap" >
                 {quizzes.map((quiz) => (

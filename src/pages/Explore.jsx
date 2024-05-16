@@ -12,6 +12,7 @@ import Quiz5 from "../images/quiz5.jpg";
 import Quiz6 from "../images/quiz6.jpg";
 import Quiz7 from "../images/quiz7.jpg";
 import Quiz8 from "../images/quiz8.png";
+import bg2 from "../images/bg2.jpg";
 import Swal from "sweetalert2";
 
 export default function Explore(props) {
@@ -138,9 +139,9 @@ export default function Explore(props) {
         />
       ) : (
         <div>
-          <div className={`mt-8 flex flex-col lg:flex-row ${selectedQuiz ? 'hidden' : ''}`}>
+          <div className={`mt-8 flex flex-col lg:flex-row ${selectedQuiz ? 'hidden' : ''}`} style={{ backgroundImage: `url(${bg2})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
             {!selectedQuiz && (
-              <div className="flex flex-wrap">
+              <div className="flex flex-wrap" >
                 {quizzes.map((quiz) => (
                   <div key={quiz.id} className="w-full lg:w-1/2 px-2 mb-8">
                     <Card

@@ -59,9 +59,9 @@ export default function Score({ quizName, userScore, totalQuestions, totalTimeTa
 
     return (
         <div className="text-center score-container border border-gray-300 p-4 rounded-lg shadow-md">
-            <h1 className="text-5xl font-bold text-transparent bg-gradient-to-r from-red-400 via-green-500 to-blue-500 bg-clip-text animate-pulse mb-2">Congratulations!</h1>
-            <h2 className='text-3xl font-bold text-blue-600'>Your Score Card</h2>
-            <h3 className="text-2xl font-semibold mb-4 mt-2 text-blue-500">{quizName}</h3>
+            <h1 className="text-5xl font-bold text-black">Congratulations!</h1>
+            <h2 className='text-3xl font-bold text-black'>Your Score Card</h2>
+            <h3 className="text-2xl font-semibold mb-4 mt-2 text-black">{quizName}</h3>
             <p className="text-xl">Score: <span className="text-green-700 font-semibold">{userScore} out of {totalQuestions} correct attempts!</span></p>
             <p className="text-xl">Total Time Taken: <span className="text-green-700 font-semibold">{totalTimeTaken} seconds</span></p>
             <div className="mt-4 rounded-sm">

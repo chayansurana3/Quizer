@@ -125,8 +125,8 @@ export default function Create(props) {
     };
 
     return (
-        <div className="mt-8 flex justify-center">
-            <form className="text-center bg-gray-100 shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit}>
+        <div className="flex justify-center bg-black">
+            <form className="text-center mt-6 bg-gray-100 shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit}>
                 <h1 className="text-blue-500 text-5xl font-bold mb-8">Create a Quiz</h1>
                 <div className="mb-4">
                     <label htmlFor="quizName" className="block text-gray-700 text-lg font-bold mb-2">Name of the quiz</label>

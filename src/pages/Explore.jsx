@@ -12,7 +12,7 @@ import Quiz5 from "../images/quiz5.jpg";
 import Quiz6 from "../images/quiz6.jpg";
 import Quiz7 from "../images/quiz7.jpg";
 import Quiz8 from "../images/quiz8.png";
-import bg2 from "../images/bg2.jpg";
+// import bg2 from "../images/bg2.jpg";
 import Swal from "sweetalert2";
 
 export default function Explore(props) {

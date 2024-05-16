@@ -139,7 +139,7 @@ export default function Explore(props) {
         />
       ) : (
         <div>
-          <div className={`mt-8 flex flex-col lg:flex-row ${selectedQuiz ? 'hidden' : ''}`} style={{ backgroundImage: `url(${bg2})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+          <div className={`mt-6 bg-black py-2 flex flex-col lg:flex-row ${selectedQuiz ? 'hidden' : ''}`} >
             {!selectedQuiz && (
               <div className="flex flex-wrap" >
                 {quizzes.map((quiz) => (

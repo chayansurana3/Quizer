@@ -7,7 +7,7 @@ exports.handler = async (event, context) => {
     .then(() => console.log("Connected to MongoDB"))
     .catch((error) => console.error("Error connecting to MongoDB:", error));
     const { id, title, email, score } = JSON.parse(event.body);
-
+    console.log(id, title, email, score);
     const user = await User.findOne({ email });
     if (!user) return {
       statusCode: 404,

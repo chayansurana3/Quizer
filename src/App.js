@@ -12,7 +12,7 @@ import Swal from 'sweetalert2';
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(true);
-  const [userName, setUserName] = useState("Chayan Surana");
+  const [userName, setUserName] = useState("-");
   const [userEmail, setUserEmail] = useState("-");
   const [quizzes, setQuizzes] = useState([]);
   const [id, setId] = useState(0);
@@ -55,8 +55,8 @@ function App() {
             const data = await response.json();
             setLoggedIn(true);
             console.log(data);
-            setUserName(data.userName);
-            setUserEmail(data.userEmail);
+            setUserName(data.user.userName);
+            setUserEmail(data.user.email);
           } else {
             localStorage.removeItem('token');
           }

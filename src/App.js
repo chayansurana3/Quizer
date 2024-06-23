@@ -60,12 +60,16 @@ function App() {
           } else {
             console.log("Error found in validating token");
             localStorage.removeItem('token');
+            setLoggedIn(false);
           }
         } catch (error) {
           console.error("Error:", error);
         }
       }
-      else console.log("No Token, Not logged in");
+      else {
+        setLoggedIn(false);
+        console.log("No Token, Not logged in");
+      }
     };
     
     const fetchData = async () => {

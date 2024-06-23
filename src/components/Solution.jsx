@@ -9,7 +9,7 @@ export default function Solution({ quiz, score, userAnswers }) {
         <div className="max-w-3xl mx-auto">
             <h2 className="right-0 mt-2 text-lg">Your Score: {score}</h2>
             {quiz.questions.map((question, index) => (
-                <div key={index} className="bg-white shadow-md mt-4 text-black rounded-md p-6 mb-4">
+                <div key={index} className="text-center bg-white shadow-md mt-4 text-black rounded-md p-6 mb-4">
                     <h3 className="text-xl font-semibold mb-4">Question {index + 1}</h3>
                     <h4 className="text-lg mb-4">{question.question}</h4>
                     <div className="grid grid-cols-1 gap-4">

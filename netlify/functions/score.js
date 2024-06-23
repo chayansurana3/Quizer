@@ -9,10 +9,14 @@ exports.handler = async (event, context) => {
     const { id, title, email, score } = JSON.parse(event.body);
     console.log(id, title, email, score);
     const user = await User.findOne({ email });
-    if (!user) return {
+    console.log("Connected");
+    if (!user) {
+      console.log("NOT FOUND");
+      return {
       statusCode: 404,
       body: JSON.stringify({ message: "User not found" })
     };
+    }
 
     let existingQuizAttemptIndex = user.solvedQuizzes.findIndex((attempt) => attempt.id === id);
 

@@ -55,8 +55,8 @@ function App() {
             const data = await response.json();
             setLoggedIn(true);
             console.log(data);
-            setUserName(data.user.userName);
-            setUserEmail(data.user.email);
+            setUserName(data.userName);
+            setUserEmail(data.userEmail);
           } else {
             localStorage.removeItem('token');
           }

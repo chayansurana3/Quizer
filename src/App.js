@@ -65,6 +65,7 @@ function App() {
           console.error("Error:", error);
         }
       }
+      else console.log("No Token, Not logged in");
     };
     
     const fetchData = async () => {

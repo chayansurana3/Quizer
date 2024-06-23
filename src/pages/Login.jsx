@@ -57,6 +57,8 @@ export default function Login(props) {
                 const data = await response.json();
                 localStorage.setItem('token', data.token);
                 props.LogIn();
+                props.setName(data.user.userName);
+                props.setUserEmail(data.user.email)
                 setFormData({
                     email: "",
                     password: ""
@@ -66,7 +68,6 @@ export default function Login(props) {
                     title: "Success...",
                     text: "You have been successfully logged in!",
                 });
-                props.setName(data.user.userName);
                 navigate("/");
             }
         } catch (error) {

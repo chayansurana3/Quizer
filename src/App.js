@@ -36,6 +36,7 @@ function App() {
     })
   }
   const setName = (name) => setUserName(name);
+  const setEmail = (email) => setUserEmail(email);
   const increaseId = () => setId(id + 1);
   const attempting = () => setQuizBeingAttempted(previousState => !previousState);
 
@@ -87,8 +88,8 @@ function App() {
         <NavBar quizzes={quizzes} loggedIn={loggedIn} userName={userName} logOut={LogOut} display={!quizBeingAttempted}/>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login LogIn={LogIn} setName={setName} userName={userName} userEmail={userEmail} />} />
-          <Route path="/signup" element={<SignUp LogIn={LogIn} setName={setName} userName={userName} userEmail={userEmail} />} />
+          <Route path="/login" element={<Login LogIn={LogIn} setName={setName} setUserEmail={setEmail} userName={userName} userEmail={userEmail} />} />
+          <Route path="/signup" element={<SignUp LogIn={LogIn} setName={setName} setUserEmail={setEmail} userName={userName} userEmail={userEmail} />} />
           <Route path="/create" element={<Create loggedIn={loggedIn} userName={userName} userEmail={userEmail} id={id} increaseId={increaseId} />} />
           <Route path="/explore" element={<Explore loggedIn={loggedIn} quizzes={quizzes} attempting={attempting} userName={userName} userEmail={userEmail} />} />
           <Route path="/profile" element={<Profile userName={userName} userEmail={userEmail}/>} />

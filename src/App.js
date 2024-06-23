@@ -58,6 +58,7 @@ function App() {
             setUserName(data.userName);
             setUserEmail(data.userEmail);
           } else {
+            console.log("Error found in validating token");
             localStorage.removeItem('token');
           }
         } catch (error) {
